@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link rel="stylesheet" href="css/stylesheet.css" />
+    <script type="text/javascript" src="js/monscript.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      .fa {
+        font-size: 60px;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .fa:hover {
+        color: darkblue;
+      }
+    </style>
+
+    <title>Shopping</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar w/ text</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarText"
+        aria-controls="navbarText"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+        </ul>
+        <span class="navbar-text"> Navbar text with an inline element </span>
+      </div>
+    </nav>
+    <div class="cart_section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-10 offset-lg-1">
+            <div class="cart_container">
+              <div class="cart_title">Shopping Cart</div>
+              <div class="cart_items">
+                <ul class="cart_list">
+                  <li class="cart_item clearfix">
+                    <div class="cart_item_image">
+                      <img src="images/1.jpg" />
+                    </div>
+                    <div
+                      class="
+                        cart_item_info
+                        d-flex
+                        flex-md-row flex-column
+                        justify-content-between
+                      "
+                    >
+                      <div class="cart_item_name cart_info_col">
+                        <div class="cart_item_title">Name</div>
+                        <div class="cart_item_text" id="brand1">Nike</div>
+                      </div>
+
+                      <div class="cart_item_quantity cart_info_col">
+                        <div class="cart_item_title">Quantity</div>
+                        <div class="cart_item_text">
+                          <input
+                            type="number"
+                            id="quantity1"
+                            name="quantity1"
+                            min="1"
+                            max="99"
+                            value="1"
+                          />
+                          <select
+                            id="size1"
+                            name="size1"
+                            onclick="deleteE('message1')"
+                          >
+                            <option value="size" disabled selected>Size</option>
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="cart_item_price cart_info_col">
+                        <div class="cart_item_title">Price</div>
+                        <div class="cart_item_text" id="price1">19.90</div>
+                      </div>
+
+                      <div class="cart_item_price cart_info_col">
+                        <div class="cart_item_title">Avis</div>
+                        <div class="cart_item_text">
+                          <i
+                            onclick="myFunction(this)"
+                            class="fa fa-thumbs-up"
+                          ></i>
+                        </div>
+                      </div>
+
+                      <div class="cart_item_color cart_info_col">
+                        <div class="cart_item_title"></div>
+                        <div class="cart_item_text">
+                          <button class="addTo" onclick="add(1)">Add</button>
+                        </div>
+                      </div>
+                      <p id="message1"></p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="cart_items">
+                <ul class="cart_list">
+                  <li class="cart_item clearfix">
+                    <div class="cart_item_image">
+                      <img src="images/2.jpg" />
+                    </div>
+                    <div
+                      class="
+                        cart_item_info
+                        d-flex
+                        flex-md-row flex-column
+                        justify-content-between
+                      "
+                    >
+                      <div class="cart_item_name cart_info_col">
+                        <div class="cart_item_title">Name</div>
+                        <div class="cart_item_text" id="brand2">Levis</div>
+                      </div>
+
+                      <div class="cart_item_quantity cart_info_col">
+                        <div class="cart_item_title">Quantity</div>
+                        <div class="cart_item_text">
+                          <input
+                            type="number"
+                            id="quantity2"
+                            name="quantity2"
+                            min="1"
+                            max="99"
+                            value="1"
+                          />
+                          <select
+                            id="size2"
+                            name="size2"
+                            onclick="deleteE('message2')"
+                          >
+                            <option value="size" disabled selected>Size</option>
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="cart_item_price cart_info_col">
+                        <div class="cart_item_title">Price</div>
+                        <div class="cart_item_text" id="price2">19.90</div>
+                      </div>
+
+                      <div class="cart_item_price cart_info_col">
+                        <div class="cart_item_title">Avis</div>
+                        <div class="cart_item_text">
+                          <i
+                            onclick="myFunction(this)"
+                            class="fa fa-thumbs-up"
+                          ></i>
+                        </div>
+                      </div>
+
+                      <div class="cart_item_color cart_info_col">
+                        <div class="cart_item_title"></div>
+                        <div class="cart_item_text">
+                          <button class="addTo" onclick="add(2)">Add</button>
+                        </div>
+                      </div>
+                      <p id="message2"></p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="cart_items">
+                <ul class="cart_list">
+                  <li class="cart_item clearfix">
+                    <div class="cart_item_image">
+                      <img src="images/3.jpg" />
+                    </div>
+                    <div
+                      class="
+                        cart_item_info
+                        d-flex
+                        flex-md-row flex-column
+                        justify-content-between
+                      "
+                    >
+                      <div class="cart_item_name cart_info_col">
+                        <div class="cart_item_title">Name</div>
+                        <div class="cart_item_text" id="brand3">Puma</div>
+                      </div>
+
+                      <div class="cart_item_quantity cart_info_col">
+                        <div class="cart_item_title">Quantity</div>
+                        <div class="cart_item_text">
+                          <input
+                            type="number"
+                            id="quantity3"
+                            name="quantity3"
+                            min="1"
+                            max="99"
+                            value="1"
+                          />
+                          <select
+                            id="size3"
+                            name="size3"
+                            onclick="deleteE('message3')"
+                          >
+                            <option value="size" disabled selected>Size</option>
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="cart_item_price cart_info_col">
+                        <div class="cart_item_title">Price</div>
+                        <div class="cart_item_text" id="price3">16.90</div>
+                      </div>
+
+                      <div class="cart_item_price cart_info_col">
+                        <div class="cart_item_title">Avis</div>
+                        <div class="cart_item_text">
+                          <i
+                            onclick="myFunction(this)"
+                            class="fa fa-thumbs-up"
+                          ></i>
+                        </div>
+                      </div>
+
+                      <div class="cart_item_color cart_info_col">
+                        <div class="cart_item_title"></div>
+                        <div class="cart_item_text">
+                          <button class="addTo" onclick="add(3)">Add</button>
+                        </div>
+                      </div>
+                      <p id="message3"></p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="cart_items">
+                <ul class="cart_list">
+                  <li class="cart_item clearfix">
+                    <div class="cart_item_image">
+                      <img src="images/4.jpg" />
+                    </div>
+                    <div
+                      class="
+                        cart_item_info
+                        d-flex
+                        flex-md-row flex-column
+                        justify-content-between
+                      "
+                    >
+                      <div class="cart_item_name cart_info_col">
+                        <div class="cart_item_title">Name</div>
+                        <div class="cart_item_text" id="brand4">Adidas</div>
+                      </div>
+
+                      <div class="cart_item_quantity cart_info_col">
+                        <div class="cart_item_title">Quantity</div>
+                        <div class="cart_item_text">
+                          <input
+                            type="number"
+                            id="quantity4"
+                            name="quantity4"
+                            min="1"
+                            max="99"
+                            value="1"
+                          />
+                          <select
+                            id="size4"
+                            name="size4"
+                            onclick="deleteE('message3')"
+                          >
+                            <option value="size" disabled selected>Size</option>
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="cart_item_price cart_info_col">
+                        <div class="cart_item_title">Price</div>
+                        <div class="cart_item_text" id="price4">15.90</div>
+                      </div>
+
+                      <div class="cart_item_price cart_info_col">
+                        <div class="cart_item_title">Avis</div>
+                        <div class="cart_item_text">
+                          <i
+                            onclick="myFunction(this)"
+                            class="fa fa-thumbs-up"
+                          ></i>
+                        </div>
+                      </div>
+
+                      <div class="cart_item_color cart_info_col">
+                        <div class="cart_item_title"></div>
+                        <div class="cart_item_text">
+                          <button class="addTo" onclick="add(4)">Add</button>
+                        </div>
+                      </div>
+                      <p id="message4"></p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="cart">
+                <h3 class="tit">My articles</h3>
+                <!-- list of the articles in the cart -->
+                <ul id="items"></ul>
+                <h3 id="total" style="text-align: left">Total: 0 $</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function myFunction(x) {
+        x.classList.toggle("fa-thumbs-down");
+      }
+    </script>
+  </body>
+</html>
